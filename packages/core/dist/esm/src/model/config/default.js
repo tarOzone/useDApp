@@ -8,6 +8,7 @@ export const DEFAULT_CONFIG = {
         ChainId.Rinkeby,
         ChainId.Ropsten,
         ChainId.BSC,
+        ChainId.BSCTestnet,
         ChainId.xDai,
         ChainId.Polygon,
         ChainId.Mumbai,

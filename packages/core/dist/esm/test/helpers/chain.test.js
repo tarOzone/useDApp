@@ -9,6 +9,7 @@ describe('Chain helpers', () => {
         expect(getChainName(ChainId.Rinkeby)).to.eq('Rinkeby');
         expect(getChainName(ChainId.Goerli)).to.eq('Goerli');
         expect(getChainName(ChainId.BSC)).to.eq('BSC');
+        expect(getChainName(ChainId.BSCTestnet)).to.eq('BSC testnet');
         expect(getChainName(ChainId.xDai)).to.eq('xDai');
         expect(getChainName(ChainId.Polygon)).to.eq('Polygon');
         expect(getChainName(ChainId.Mumbai)).to.eq('Mumbai');
@@ -20,6 +21,7 @@ describe('Chain helpers', () => {
         expect(isTestChain(ChainId.Rinkeby)).to.be.true;
         expect(isTestChain(ChainId.Goerli)).to.be.true;
         expect(isTestChain(ChainId.BSC)).to.be.false;
+        expect(isTestChain(ChainId.BSCTestnet)).to.be.true;
         expect(isTestChain(ChainId.xDai)).to.be.false;
         expect(isTestChain(ChainId.Polygon)).to.be.false;
         expect(isTestChain(ChainId.Mumbai)).to.be.true;
@@ -32,6 +34,7 @@ describe('Chain helpers', () => {
         expect(getExplorerAddressLink(address, ChainId.Rinkeby)).to.eq('https://rinkeby.etherscan.io/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987');
         expect(getExplorerAddressLink(address, ChainId.Goerli)).to.eq('https://goerli.etherscan.io/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987');
         expect(getExplorerAddressLink(address, ChainId.BSC)).to.eq('https://bscscan.com/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987');
+        expect(getExplorerAddressLink(address, ChainId.BSCTestnet)).to.eq('https://testnet.bscscan.com/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987');
         expect(getExplorerAddressLink(address, ChainId.xDai)).to.eq('https://blockscout.com/poa/xdai/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987/transactions');
         expect(getExplorerAddressLink(address, ChainId.Polygon)).to.eq('https://explorer-mainnet.maticvigil.com/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987/transactions');
         expect(getExplorerAddressLink(address, ChainId.Mumbai)).to.eq('https://explorer-mumbai.maticvigil.com/address/0xC7095A52C403ee3625Ce8B9ae8e2e46083b81987/transactions');
@@ -44,6 +47,7 @@ describe('Chain helpers', () => {
         expect(getExplorerTransactionLink(tx, ChainId.Rinkeby)).to.eq('https://rinkeby.etherscan.io/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a');
         expect(getExplorerTransactionLink(tx, ChainId.Goerli)).to.eq('https://goerli.etherscan.io/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a');
         expect(getExplorerTransactionLink(tx, ChainId.BSC)).to.eq('https://bscscan.com/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a');
+        expect(getExplorerTransactionLink(tx, ChainId.BSCTestnet)).to.eq('https://testnet.bscscan.com/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a');
         expect(getExplorerTransactionLink(tx, ChainId.xDai)).to.eq('https://blockscout.com/poa/xdai/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a/internal-transactions');
         expect(getExplorerTransactionLink(tx, ChainId.Polygon)).to.eq('https://explorer-mainnet.maticvigil.com/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a/internal-transactions');
         expect(getExplorerTransactionLink(tx, ChainId.Mumbai)).to.eq('https://explorer-mumbai.maticvigil.com/tx/0x5d53558791c9346d644d077354420f9a93600acf54eb6a279f12b43025392c3a/internal-transactions');

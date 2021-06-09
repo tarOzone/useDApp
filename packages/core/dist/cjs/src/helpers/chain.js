@@ -23,6 +23,8 @@ function getExplorerAddressLink(address, chainId) {
             return "https://" + etherscanNetworkPrefix(chainId) + "etherscan.io/address/" + address;
         case constants_1.ChainId.BSC:
             return "https://bscscan.com/address/" + address;
+        case constants_1.ChainId.BSCTestnet:
+            return "https://testnet.bscscan.com/address/" + address;
         case constants_1.ChainId.xDai:
             return "https://blockscout.com/poa/xdai/address/" + address + "/transactions";
         case constants_1.ChainId.Polygon:
@@ -42,6 +44,8 @@ function getExplorerTransactionLink(transactionHash, chainId) {
             return "https://" + etherscanNetworkPrefix(chainId) + "etherscan.io/tx/" + transactionHash;
         case constants_1.ChainId.BSC:
             return "https://bscscan.com/tx/" + transactionHash;
+        case constants_1.ChainId.BSCTestnet:
+            return "https://testnet.bscscan.com/tx/" + transactionHash;
         case constants_1.ChainId.xDai:
             return "https://blockscout.com/poa/xdai/tx/" + transactionHash + "/internal-transactions";
         case constants_1.ChainId.Polygon:

@@ -11,6 +11,7 @@ exports.DEFAULT_CONFIG = {
         constants_1.ChainId.Rinkeby,
         constants_1.ChainId.Ropsten,
         constants_1.ChainId.BSC,
+        constants_1.ChainId.BSCTestnet,
         constants_1.ChainId.xDai,
         constants_1.ChainId.Polygon,
         constants_1.ChainId.Mumbai,
